@@ -87,6 +87,9 @@ const postSendRemedy = (data) => {
   return axios.post(`/api/send-remedy`,data);
 };
 
+const getAllHandbook = () => {
+  return axios.get(`/api/get-handbook`);
+};
 
 export {
   handleLoginApi,
@@ -113,4 +116,5 @@ export {
   getDetailClinicById,
   getAllPatientForDoctor,
   postSendRemedy,
+  getAllHandbook,
 };

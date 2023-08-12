@@ -1,27 +1,27 @@
 {
   "homeheader": {
-    "speciality": "Medical specialty",
-    "searchdoctor": "Find a doctor by specialty",
-    "health-facility": "Health facilities",
-    "select-room": "Choose hospital clinic",
-    "doctor": "Doctor",
-    "select-doctor": "Choose a good doctor",
-    "fee": "Checkup package",
-    "check-health": "General health check",
+    "speciality": "Hairstyle",
+    "searchdoctor": "Find a barber",
+    "health-facility": "Barbershop",
+    "select-room": "Choose Barbershop",
+    "doctor": "Barber",
+    "select-doctor": "Choose a barber expert",
+    "fee": "Combo",
+    "check-health": "Comprehensive hair care combo",
     "support": "Support",
     "welcome": "Hello",
-    "find": "Find a specialty"
+    "find": "Find a hairstyle"
 
   },
   "banner": {
-    "title1": "MEDICAL PLATFORM",
-    "title2": "Comprehensive Health Care",
-    "child1": "Specialized examination",
-    "child2": "Remote examination",
-    "child3": "General examination",
-    "child4": "Medical test",
-    "child5": "Mental health",
-    "child6": "Dental examination"
+    "title1": "Master Barber",
+    "title2": "Hair is not beautiful do not take money",
+    "child1": "Hair consulting",
+    "child2": "Remote booking",
+    "child3": "Hair dying",
+    "child4": "Combo haircut",
+    "child5": "Hot towel shaving",
+    "child6": "Taking earwax"
   },
   "menu": {
     "admin": {
@@ -58,9 +58,12 @@
     "edit": "save changes"
   },
   "homepage": {
-    "outstanding-doctor": "Last Week Featured Doctor",
+    "outstanding-doctor": "Last Week Featured Barber",
     "more-infor": "Read More Infor",
-    "specialty-popular":"Most Popular Specialties"
+    "specialty-popular":"Most Popular Hairstyle",
+    "outstanding-barbershop": "Outstanding Barbershop",
+    "handbook": "HandBook",
+    "about": "Experience at a professional Barbershop"
   },
   "manage-schedule": {
     "title": "Manage doctor`s  examination plan",

@@ -1,26 +1,26 @@
 {
   "homeheader": {
-    "speciality": "Chuyên Khoa",
-    "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
-    "health-facility": "Cơ sở y tế",
-    "select-room": "Chọn bệnh viện phòng khám",
-    "doctor": "Bác sĩ",
-    "select-doctor": "Chọn bác sĩ giỏi",
-    "fee": "Gói Khám",
-    "check-health": "Khám sức khỏe tổng quát",
+    "speciality": "Kiểu tóc",
+    "searchdoctor": "Tìm kiếm barber",
+    "health-facility": "Barbershop",
+    "select-room": "Chọn Barbershop",
+    "doctor": "Barber",
+    "select-doctor": "Chọn chuyên gia barber",
+    "fee": "Combo",
+    "check-health": "Combo chăm sóc tóc toàn diện",
     "support": "Hỗ Trợ",
     "welcome": "Xin Chào",  
-    "find": "Tìm chuyên khoa khám bệnh"
+    "find": "Tìm kiểu tóc"
   },
   "banner": {
-    "title1": "Nền Tảng Y Tế",
-    "title2": "Chăm Sóc Sức Khỏe Toàn Diện",
-    "child1": "Khám Chuyên Khoa",
-    "child2": "Khám Từ Xa",
-    "child3": "Khám Tổng Quát",
-    "child4": "Xét Nghiệm Y Học",
-    "child5": "Sức Khỏe Tinh Thần",
-    "child6": "Khám Nha Khoa"
+    "title1": "Chuyên gia barber",
+    "title2": "Tóc không đẹp không lấy tiền",
+    "child1": "Tư vấn kiểu tóc",
+    "child2": "Đặt lịch Từ Xa",
+    "child3": "Nhuộm tóc",
+    "child4": "Combo cắt sấy gội",
+    "child5": "Cạo mặt khăn nóng",
+    "child6": "Lấy ráy tai"
   },
   "menu": {
     "admin": {
@@ -57,9 +57,12 @@
     "edit": "Lưu Thay Đổi"
   },
   "homepage": {
-    "outstanding-doctor": "Bác Sĩ Nổi Bật Tuần Qua",
+    "outstanding-doctor": "Barber Nổi Bật Tuần Qua",
     "more-infor": "Xem Thêm",
-    "specialty-popular":"Chuyên Khoa Phổ Biến"
+    "specialty-popular":"Kiểu Tóc Phổ Biến",
+    "outstanding-barbershop": "Barbershop Nổi Bật",
+    "handbook": "Cẩm Nang",
+    "about": "Trải nghiệm tại 1 Barbershop chuyên nghiệp"
   },
   "manage-schedule": {
     "title": "Quản Lý Kế Hoạch Khám Bệnh Của Bác Sĩ",

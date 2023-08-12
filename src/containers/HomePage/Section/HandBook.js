@@ -2,43 +2,68 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
+import { getAllHandbook } from "../../../services/userService";
 import Slider from "react-slick";
 
 class HandBook extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          dataHandbook: [],
+        };
+      }
+      async componentDidMount() {
+        let res = await getAllHandbook();
+        if (res && res.errCode === 0) {
+          this.setState({
+            dataHandbook: res.data ? res.data : [],
+          });
+        }
+        try {
+          let res = await getAllHandbook();
+          console.log("Handbook Data:", res);
+          if (res && res.errCode === 0) {
+            this.setState({
+              dataHandbook: res.data ? res.data : [],
+            });
+          }
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      }
     render() {
+        let { dataHandbook } = this.state;       
         return (
             <div className="section-share section-handbook">
                 <div className="section-container">
                     <div className="section-header">
-                        <span className="title-section"> cam Nang</span>
-                        <button className="btn-section">Xem them</button>
+                        <span className="title-section"><FormattedMessage id="homepage.handbook"/></span>
+                        <button className="btn-section"><FormattedMessage id="homepage.more-infor"/></button>
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
-                            <div className="section-customize">
+                            {/* <div className="section-customize">
                                 <div className="bg-image section-handbook"></div>
                                 <div>Co xuong khop 1</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-handbook"></div>
-                                <div>Co xuong khop 2</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-handbook"></div>
-                                <div>Co xuong khop 3</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-handbook"></div>
-                                <div>Co xuong khop 4</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-handbook"></div>
-                                <div>Co xuong khop 5</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-handbook"></div>
-                                <div>Co xuong khop 6</div>
-                            </div>
+                            </div> */}
+                            {dataHandbook &&
+                                dataHandbook.length > 0 &&
+                                dataHandbook.map((item, index) => {
+                                    return (
+                                        <a
+                                        className="section-customize handbook-child"
+                                        key={index}                                        
+                                        href={item.link}
+                                        target="_blank"
+                                        >
+                                        <div
+                                            className="bg-image section-handbook"
+                                            style={{ backgroundImage: `url(${item.image})` }}
+                                        ></div>
+                                        <div className="handbook-name" style={{"font-weight": "bold","color": "black"}}>{item.description}</div>
+                                        </a>
+                                    );
+                            })}
                         </Slider>
                     </div>
                 </div>

@@ -32,8 +32,12 @@ class MedicalFacility extends Component {
       <div className="section-share section-medical-facility">
         <div className="section-container">
           <div className="section-header">
-            <span className="title-section"> Co so y te noi bat</span>
-            <button className="btn-section">Xem them</button>
+            <span className="title-section">
+            <FormattedMessage id="homepage.outstanding-barbershop" />
+            </span>
+            <button className="btn-section">
+              <FormattedMessage id="homepage.more-infor" />
+            </button>
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
@@ -65,6 +69,7 @@ class MedicalFacility extends Component {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    language: state.app.language,
   };
 };
 
