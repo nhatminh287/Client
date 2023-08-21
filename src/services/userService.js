@@ -62,6 +62,9 @@ const postVerifyBookAppointment =(data)=>{
 const createNewSpecialty =(data)=>{
   return axios.post(`/api/create-new-specialty`, data);
 }
+const editHairstyle =(data)=>{
+  return axios.put(`/api/edit-hairstyle`, data);
+}
 const getAllSpecialty =()=>{
   return axios.get(`/api/get-all-specialty`);
 }
@@ -117,4 +120,5 @@ export {
   getAllPatientForDoctor,
   postSendRemedy,
   getAllHandbook,
+  editHairstyle,
 };

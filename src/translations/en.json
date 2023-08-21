@@ -26,20 +26,22 @@
   "menu": {
     "admin": {
       "manage-user": "Users System",
-      "manage-doctor": "Manage Doctor",
+      "manage-barber": "Manage Barber",
       "manage-admin": "Manage Admin",
       "crud": "CRUD user",
       "crud-redux": "CRUD Redux",
-      "clinic": "Clinics",
-      "manage-clinic": "Manage Clinics",
-      "specialty": "Specialties",
-      "manage-specialty": "Manage Specialties",
+      "barbershop": "Barbershop",
+      "manage-barbershop": "Manage Barbershop",
+      "specialty": "Specialties",     
       "handbook": "HandBook",
-      "manage-handbook": "Manage HandBook"
+      "manage-handbook": "Manage HandBook",
+      "hairstyle": "Hairstyle",
+      "add-hairstyle": "Add new Hairstyle",
+      "edit-hairstyle": "Edit Hairstyle Information"
     },
-    "doctor": {
-      "manage-schedule": "Manage Doctor Schedules",
-      "manage-patient": "Manage Patient"
+    "barber": {
+      "manage-schedule": "Manage Barber Schedules",
+      "manage-customer": "Manage Customer"
     }
   },
   "manage-user": {
@@ -66,27 +68,27 @@
     "about": "Experience at a professional Barbershop"
   },
   "manage-schedule": {
-    "title": "Manage doctor`s  examination plan",
-    "choose-doctor": "Choose Doctor",
+    "title": "Manage barber`s  work plan",
+    "choose-doctor": "Choose Barber",
     "choose-date": "Choose Date",
     "save": "Save Infor"
   },
   "patient": {
     "detail-doctor": {
       "schedule": "Schedule",
-      "no-schedule": "Doctor doesn't have an appointment during this time !",
+      "no-schedule": "Barber doesn't have an appointment during this time !",
       "choose": " Choose ",
       "book-free": " And Book (Free !) "
     },
     "extra-infor-doctor":{
-      "text-address":"Address of examination",
-      "price":"Examination price :",
+      "text-address":"Address of Barbershop",
+      "price":"Price :",
       "detail":"See Details",
-      "payment":"The patient can pay the cost in the form of :",
+      "payment":"The customer can pay the cost in the form of :",
       "hide-price":"Hide Price List"
     },
     "booking-modal": {
-      "title": "Information of Exammination",
+      "title": "Information of booking",
       "fullName": "Full Name",
       "phoneNumber": "Phone Number",
       "email": "Email",
@@ -102,19 +104,19 @@
   },
   "admin": {
     "manage-doctor": {
-      "title": "Create More Informations Doctor",
-      "select-doctor": "Choose Doctors ...",
+      "title": "Create More Informations Barber",
+      "select-doctor": "Choose Barbers ...",
       "intro": "Introduction",
       "add": "Create Infor",
       "save": "Save Infor",
       "price": "Price",
       "payment": "Payment Method",
       "province":"Province",
-      "nameClinic":"Name Clinic",
-      "addressClinic":"Address Clinic",
+      "nameClinic":"Name Barbershop",
+      "addressClinic":"Address Barbershop",
       "note":"Note",
-      "specialty":"Choose Specialty",
-      "select-clinic":"Choose Clinic"
+      "specialty":"Choose Hairstyle",
+      "select-clinic":"Choose Barbershop"
     }
   }
 }

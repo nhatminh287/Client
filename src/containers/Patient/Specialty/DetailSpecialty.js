@@ -123,19 +123,7 @@ class DetailSpecialty extends Component {
               ></div>
             )}
           </div>
-          <div className="search-sp-doctor">
-            <select onChange={(event) => this.handleOnChangeSelect(event)}>
-              {listProvince &&
-                listProvince.length > 0 &&
-                listProvince.map((item, index) => {
-                  return (
-                    <option key={index} value={item.keyMap}>
-                      {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
-                    </option>
-                  );
-                })}
-            </select>
-          </div>
+          
           {arrDoctorId &&
             arrDoctorId.length > 0 &&
             arrDoctorId.map((item, index) => {

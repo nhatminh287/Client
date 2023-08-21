@@ -105,7 +105,9 @@ class BookingModal extends Component {
   };
 
   buildDoctorName = (dataTime) => {
+    console.log('data time la gi: ', dataTime);
     let { language } = this.props;
+    console.log('in ra language: ', language);
     if (dataTime && !_.isEmpty(dataTime)) {
       let name =
         language === LANGUAGES.VI

@@ -17,6 +17,8 @@ class ProfileDoctor extends Component {
   }
   async componentDidMount() {
     let data = await this.getInforDoctor(this.props.doctorId);
+    console.log("data dcotor: ", data);
+    console.log ("image: ", data.image);
     this.setState({
       dataProfile: data,
     });
@@ -67,7 +69,7 @@ class ProfileDoctor extends Component {
   };
 
   render() {
-    let { dataProfile } = this.state;
+    let { dataProfile } = this.state;    
     let {
       language,
       isShowDescriptionDoctor,
@@ -79,8 +81,8 @@ class ProfileDoctor extends Component {
     let nameVi = "";
     let nameEn = "";
     if (dataProfile && dataProfile.positionData) {
-      nameVi = `${dataProfile.positionData.valueVi}:${dataProfile.lastName} ${dataProfile.firstName} `;
-      nameEn = `${dataProfile.positionData.valueEn}:${dataProfile.firstName} ${dataProfile.lastName}`;
+      nameVi = `${dataProfile.lastName} ${dataProfile.firstName} `;
+      nameEn = `${dataProfile.firstName} ${dataProfile.lastName}`;
     }
     return (
       <div className="profile-doctor-container">
@@ -89,7 +91,7 @@ class ProfileDoctor extends Component {
             className="content-left"
             style={{
               backgroundImage: `url(${
-                dataProfile && dataProfile.image ? dataProfile.image : ""
+                dataProfile && dataProfile.image ? dataProfile.image : "https://i.ytimg.com/vi/rjTsqr-Ahkk/maxresdefault.jpg"
               })`,
             }}
           ></div>

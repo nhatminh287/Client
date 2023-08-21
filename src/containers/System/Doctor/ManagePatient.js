@@ -109,10 +109,10 @@ class ManagePatient extends Component {
           text="Loading..."
         >
           <div className="manage-patient-container">
-            <div className="m-p-title">Quản Lý Bệnh Nhân Khám Bệnh</div>
+            <div className="m-p-title">Quản Lý Khách Hàng Đặt Lịch</div>
             <div className="manage-patient-body row">
               <div className="col-4 form-group">
-                <label>Chọn Ngày Khám</label>
+                <label>Chọn Ngày</label>
                 <DatePicker
                   onChange={this.handleOnChangeDatePicker}
                   className="form-control"

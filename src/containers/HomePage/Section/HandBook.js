@@ -42,10 +42,7 @@ class HandBook extends Component {
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
-                            {/* <div className="section-customize">
-                                <div className="bg-image section-handbook"></div>
-                                <div>Co xuong khop 1</div>
-                            </div> */}
+                            
                             {dataHandbook &&
                                 dataHandbook.length > 0 &&
                                 dataHandbook.map((item, index) => {
