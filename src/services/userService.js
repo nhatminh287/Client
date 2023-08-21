@@ -62,6 +62,9 @@ const postVerifyBookAppointment =(data)=>{
 const createNewSpecialty =(data)=>{
   return axios.post(`/api/create-new-specialty`, data);
 }
+const editHairstyle =(data)=>{
+  return axios.put(`/api/edit-hairstyle`, data);
+}
 const getAllSpecialty =()=>{
   return axios.get(`/api/get-all-specialty`);
 }
@@ -87,6 +90,9 @@ const postSendRemedy = (data) => {
   return axios.post(`/api/send-remedy`,data);
 };
 
+const getAllHandbook = () => {
+  return axios.get(`/api/get-handbook`);
+};
 
 export {
   handleLoginApi,
@@ -113,4 +119,6 @@ export {
   getDetailClinicById,
   getAllPatientForDoctor,
   postSendRemedy,
+  getAllHandbook,
+  editHairstyle,
 };

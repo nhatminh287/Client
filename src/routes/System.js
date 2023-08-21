@@ -7,6 +7,7 @@ import Header from "../containers/Header/Header";
 import ManageDoctor from "../containers/System/Admin/ManageDoctor";
 import ManageSpecialty from '../containers/System/Specialty/ManageSpecialty'
 import ManageClinic from '../containers/System/Clinic/ManageClinic';
+import EditHairstyle from "../containers/System/Specialty/EditHairstyle";
 class System extends Component {
   render() {
     const { systemMenuPath, isLoggedIn } = this.props;
@@ -18,9 +19,10 @@ class System extends Component {
             <Switch>
               <Route path="/system/user-manage" component={UserManage} />
               <Route path="/system/user-redux" component={UserRedux} />
-              <Route path="/system/manage-doctor" component={ManageDoctor} />
-              <Route path="/system/manage-specialty" component={ManageSpecialty} />
-              <Route path="/system/manage-clinic" component={ManageClinic} />
+              <Route path="/system/manage-barber" component={ManageDoctor} />
+              <Route path="/system/add-hairstyle" component={ManageSpecialty} />
+              <Route path="/system/edit-hairstyle" component={EditHairstyle} />
+              <Route path="/system/manage-barbershop" component={ManageClinic} />
               <Route
                 component={() => {
                   return <Redirect to={systemMenuPath} />;

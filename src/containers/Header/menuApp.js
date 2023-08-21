@@ -12,62 +12,63 @@ export const adminMenu = [
         link: "/system/user-redux",
       },
       {
-        name: "menu.admin.manage-doctor",
-        link: "/system/manage-doctor",
+        name: "menu.admin.manage-barber",
+        link: "/system/manage-barber",
         // subMenus: [
         //     { name: 'menu.system.system-administrator.user-manage', link: '/system/user-manage' },
         //     { name: 'menu.system.system-administrator.user-redux', link: '/system/user-redux' },
         // ]
       },
       {
-        // quan ly ke hoach kham benh cua bac si
-        name: "menu.doctor.manage-schedule",
-        link: "/doctor/manage-schedule",
+        // quan ly lich lam viec cua barber
+        name: "menu.barber.manage-schedule",
+        link: "/barber/manage-schedule",
       },
     ],
   },
   {
     // Manage Clinic
-    name: "menu.admin.clinic",
+    name: "menu.admin.barbershop",
     menus: [
       {
-        name: "menu.admin.manage-clinic",
-        link: "/system/manage-clinic",
+        name: "menu.admin.manage-barbershop",
+        link: "/system/manage-barbershop",
       },
     ],
   },
   {
-    // Manage Specialty
-    name: "menu.admin.specialty",
+    // Add hairstyle
+    name: "menu.admin.hairstyle",
     menus: [
       {
-        name: "menu.admin.manage-specialty",
-        link: "/system/manage-specialty",
+        name: "menu.admin.add-hairstyle",
+        link: "/system/add-hairstyle",
       },
     ],
   },
   {
-    // Manage HandBook
-    name: "menu.admin.handbook",
+    // Edit hairstyle
+    name: "menu.admin.edit-hairstyle",
     menus: [
       {
-        name: "menu.admin.manage-handbook",
-        link: "/system/manage-handbook",
+        name: "menu.admin.edit-hairstyle",
+        link: "/system/edit-hairstyle",
       },
     ],
-  },
+  }
+  
 ];
 export const doctorMenu = [
   {
     name: "menu.admin.manage-user",
     menus: [
-      {// Quan Ly ke hoach kham benh cua bac si 
-            name: "menu.doctor.manage-schedule",
-            link: "/doctor/manage-schedule",
+      {// Quan Ly dat lich cua barber 
+            name: "menu.barber.manage-schedule",
+            link: "/barber/manage-schedule",
       },
-      {// Quan Ly benh nhan kham benh cua bac sy
-            name: "menu.doctor.manage-patient",
-            link: "/doctor/manage-patient",
+      {// Quan Ly khach hang
+            name: "menu.barber.manage-customer",
+            link: "/barber/manage-customer",
       },
     ],
   },

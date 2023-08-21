@@ -54,29 +54,29 @@ class OutStandingDoctor extends Component {
               {arrDoctors &&
                 arrDoctors.length > 0 &&
                 arrDoctors.map((item, index) => {
-                  let nameVi = `${item.positionData.valueVi}:${item.lastName} ${item.firstName} `;
-                  let nameEn = `${item.positionData.valueEn}:${item.firstName} ${item.lastName}`;
+                  let nameVi = `${item.lastName} ${item.firstName} `;
+                  let nameEn = `${item.firstName} ${item.lastName}`;
 
-                  let imageBase64 = "";
-                  if (item.image) {
-                    imageBase64 = new Buffer(item.image, "base64").toString(
-                      "binary"
-                    );
-                  }
+                  // let imageBase64 = "";
+                  // if (item.image) {
+                  //   imageBase64 = new Buffer(item.image, "base64").toString(
+                  //     "binary"
+                  //   );
+                  // }
                   return (
                     <div className="section-customize" key={index} onClick={()=>this.handleViewDetailDoctor(item)}>
                       <div className="customize-border">
                         <div className="outer-bg">
                           <div
                             className="bg-image section-outstanding-doctor"
-                            style={{ backgroundImage: `url(${imageBase64})` }}
+                            style={{ backgroundImage: `url(${item.image})` }}
                           ></div>
                         </div>
                         <div className="position text-center">
                           <div>
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                           </div>
-                          <div>co xuong khop</div>
+                          
                         </div>
                       </div>
                     </div>
