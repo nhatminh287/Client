@@ -48,7 +48,7 @@ class DetailDoctor extends Component {
       nameEn = `${detailDoctor.firstName} ${detailDoctor.lastName}`;
     }
     let currentURL =  process.env.REACT_APP_IS_LOCALHOST === 1
-      ? 'link-to-herokuapp'
+      ? "https://client-jnr3143va-nhatminh287.vercel.app/"
       : window.location.href;
       console.log(`currentURL`, currentURL);
     return (
