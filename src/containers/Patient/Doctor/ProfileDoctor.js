@@ -28,10 +28,13 @@ class ProfileDoctor extends Component {
     let result = {};
     if (id) {
       let res = await getProfileDoctorById(id);
+      console.log("res :", res);
       if (res && res.errCode === 0) {
         result = res.data;
+        console.log("result :", result);
       }
     }
+
     return result;
   };
 
