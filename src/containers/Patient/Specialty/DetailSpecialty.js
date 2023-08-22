@@ -89,6 +89,7 @@ class DetailSpecialty extends Component {
          res.errCode === 0 
        ) {
          let data = res.data;
+         console.log("data of getDetailSpecialtyById", data);
          let arrayDoctorId = [];
          if (data && !_.isEmpty(data)) {
            let arr = data.doctorSpecialty;
@@ -110,6 +111,7 @@ class DetailSpecialty extends Component {
   render() {
     let { arrDoctorId, dataDetailSpecialty, listProvince } = this.state;
     let { language } = this.props;
+    console.log("arrDoctorId: ", arrDoctorId);
     return (
       <div className="detail-specialty-container">
         <HomeHeader />
