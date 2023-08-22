@@ -47,7 +47,9 @@ class LikeAndShare extends Component {
           data-layout="standard"
           data-action="like"
           data-size="small"
-          data-share="true"></div>
+          data-share="true">
+            <a target="_top" href={dataHref} />
+            </div>
       </>
     );
   }
