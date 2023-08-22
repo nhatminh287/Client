@@ -84,10 +84,8 @@ class DetailSpecialty extends Component {
          id: id,
          location: location,
        });
-       if (
-         res &&
-         res.errCode === 0 
-       ) {
+       console.log("res: ", res);
+       if (res && res.errCode === 0 ) {
          let data = res.data;
          console.log("data of getDetailSpecialtyById", data);
          let arrayDoctorId = [];
