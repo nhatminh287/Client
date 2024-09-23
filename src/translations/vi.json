@@ -1,11 +1,11 @@
 {
   "homeheader": {
     "speciality": "Kiểu tóc",
-    "searchdoctor": "Tìm kiếm barber",
+    "searchbarber": "Tìm kiếm barber",
     "health-facility": "Barbershop",
     "select-room": "Chọn Barbershop",
-    "doctor": "Barber",
-    "select-doctor": "Chọn chuyên gia barber",
+    "barber": "Barber",
+    "select-barber": "Chọn chuyên gia barber",
     "fee": "Combo",
     "check-health": "Combo chăm sóc tóc toàn diện",
     "support": "Hỗ Trợ",
@@ -31,8 +31,8 @@
       "crud-redux": "CRUD Redux",      
       "barbershop": "Barbershop",
       "manage-barbershop": "Quản Lí Barbershop",
-      "specialty": "Chuyên Khoa",
-      "manage-specialty": "Thêm mới Kiểu tóc",
+      "hairstyle": "Chuyên Khoa",
+      "manage-hairstyle": "Thêm mới Kiểu tóc",
       "handbook": "Cẩm Nang",
       "manage-handbook": "Quản Lí Cẩm Nang",
       "hairstyle": "Kiểu tóc",
@@ -60,27 +60,27 @@
     "edit": "Lưu Thay Đổi"
   },
   "homepage": {
-    "outstanding-doctor": "Barber Nổi Bật Tuần Qua",
+    "outstanding-barber": "Barber Nổi Bật Tuần Qua",
     "more-infor": "Xem Thêm",
-    "specialty-popular":"Kiểu Tóc Phổ Biến",
+    "hairstyle-popular":"Kiểu Tóc Phổ Biến",
     "outstanding-barbershop": "Barbershop Nổi Bật",
     "handbook": "Cẩm Nang",
     "about": "Trải nghiệm tại 1 Barbershop chuyên nghiệp"
   },
   "manage-schedule": {
     "title": "Quản Lý Kế Hoạch làm việc Của Barber",
-    "choose-doctor": "Chọn Barber",
+    "choose-barber": "Chọn Barber",
     "choose-date": "Chọn Ngày",
     "save": "Lưu Lịch"
   },
-  "patient": {
-    "detail-doctor": {
+  "customer": {
+    "detail-barber": {
       "schedule": "Lịch Hẹn",
       "no-schedule": "Barber Không Có Lịch Làm Việc Trong Thời Gian Này ! ",
       "choose": " Chọn ",
       "book-free": " Và Đặt Lịch (Miễn Phí !) "
     },
-    "extra-infor-doctor": {
+    "extra-infor-barber": {
       "text-address": "địa chỉ Barbershop",
       "price": "Giá tư vấn trực tiếp:",
       "detail": "Xem Chi Tiết",
@@ -103,20 +103,20 @@
     }
   },
   "admin": {
-    "manage-doctor": {
+    "manage-barber": {
       "title": "Tạo Thông Tin Barber",
-      "select-doctor": "Chọn Barber",
+      "select-barber": "Chọn Barber",
       "intro": "Thông Tin Giới Thiệu",
       "add": "Tạo Thông Tin",
       "save": "Lưu Thông Tin",
       "price": "Giá dịch vụ",
       "payment": "Phương Thức Thanh Toán",
       "province": "Tỉnh Thành",
-      "nameClinic": "Tên Barbershop",
-      "addressClinic": "Địa Chỉ Barbershop",
+      "nameBarbershop": "Tên Barbershop",
+      "addressBarbershop": "Địa Chỉ Barbershop",
       "note": "Ghi Chú",
-      "specialty":"Chọn kiểu tóc",
-      "select-clinic":"Chọn Barbershop"
+      "hairstyle":"Chọn kiểu tóc",
+      "select-barbershop":"Chọn Barbershop"
     }
   }
 }

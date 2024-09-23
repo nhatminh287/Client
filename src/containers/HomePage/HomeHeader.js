@@ -44,7 +44,7 @@ class HomeHeader extends Component {
                   </b>
                 </div>
                 <div className="subs-title">
-                  <FormattedMessage id="homeheader.searchdoctor" />
+                  <FormattedMessage id="homeheader.searchbarber" />
                 </div>
               </div>
               <div className="child-content">
@@ -60,11 +60,11 @@ class HomeHeader extends Component {
               <div className="child-content">
                 <div>
                   <b>
-                    <FormattedMessage id="homeheader.doctor" />
+                    <FormattedMessage id="homeheader.barber" />
                   </b>
                 </div>
                 <div className="subs-title">
-                  <FormattedMessage id="homeheader.select-doctor" />
+                  <FormattedMessage id="homeheader.select-barber" />
                 </div>
               </div>
               <div className="child-content">

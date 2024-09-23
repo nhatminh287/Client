@@ -26,65 +26,65 @@ const getAllCodeService = (inputType) => {
   return axios.get(`/api/allcode?type=${inputType}`);
 };
 
-const getTopDoctorHomeService = (limit) => {
-  return axios.get(`/api/top-doctor-home?limit=${limit}`);
+const getTopBarberHomeService = (limit) => {
+  return axios.get(`/api/top-barber-home?limit=${limit}`);
 }
-const getAllDoctors = () => {
-  return axios.get(`/api/get-all-doctors`);
+const getAllBarbers = () => {
+  return axios.get(`/api/get-all-barbers`);
 }
 
-const saveDetailDoctorService = (data) => {
-  return axios.post(`/api/save-infor-doctors`, data);
+const saveDetailBarberService = (data) => {
+  return axios.post(`/api/save-infor-barbers`, data);
 };
 
-const getDetailInforDoctor =(inputId)=>{
-   return axios.get(`/api/get-detail-doctor-by-id?id=${inputId}`);
+const getDetailInforBarber =(inputId)=>{
+   return axios.get(`/api/get-detail-barber-by-id?id=${inputId}`);
 }
 
-const saveBulkScheduleDoctor =(data)=>{
+const saveBulkScheduleBarber =(data)=>{
    return axios.post(`/api/bulk-create-schedule`,data);
 }
-const getScheduleDoctorByDate =(doctorId,date)=>{
-  return axios.get(`/api/get-schedule-doctor-by-date?doctorId=${doctorId}&date=${date}`);
+const getScheduleBarberByDate =(barberId,date)=>{
+  return axios.get(`/api/get-schedule-barber-by-date?barberId=${barberId}&date=${date}`);
 }
-const getExtraInforDoctorById =(doctorId)=>{
-  return axios.get(`/api/get-extra-infor-doctor-by-id?doctorId=${doctorId}`);
+const getExtraInforBarberById =(barberId)=>{
+  return axios.get(`/api/get-extra-infor-barber-by-id?barberId=${barberId}`);
 }
-const getProfileDoctorById =(doctorId)=>{
-  return axios.get(`/api/get-profile-doctor-by-id?doctorId=${doctorId}`);
+const getProfileBarberById =(barberId)=>{
+  return axios.get(`/api/get-profile-barber-by-id?barberId=${barberId}`);
 }
-const postPatientBookAppointment =(data)=>{
-  return axios.post(`/api/patient-book-appointment`,data);
+const postCustomerBookAppointment =(data)=>{
+  return axios.post(`/api/customer-book-appointment`,data);
 }
 const postVerifyBookAppointment =(data)=>{
   return axios.post(`/api/verify-book-appointment`, data);
 }
-const createNewSpecialty =(data)=>{
-  return axios.post(`/api/create-new-specialty`, data);
+const createNewHairstyle =(data)=>{
+  return axios.post(`/api/create-new-hairstyle`, data);
 }
 const editHairstyle =(data)=>{
   return axios.put(`/api/edit-hairstyle`, data);
 }
-const getAllSpecialty =()=>{
-  return axios.get(`/api/get-all-specialty`);
+const getAllHairstyle =()=>{
+  return axios.get(`/api/get-all-hairstyle`);
 }
-const getDetailSpecialtyById =(data)=>{
-  return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`);
+const getDetailHairstyleById =(data)=>{
+  return axios.get(`/api/get-detail-hairstyle-by-id?id=${data.id}&location=${data.location}`);
 }
-const createNewClinic = (data) => {
-  return axios.post(`/api/create-new-clinic`, data);
+const createNewBarbershop = (data) => {
+  return axios.post(`/api/create-new-barbershop`, data);
 };
 
-const getAllClinic = () => {
-  return axios.get(`/api/get-clinic`);
+const getAllBarbershop = () => {
+  return axios.get(`/api/get-barbershop`);
 };
 
-const getDetailClinicById = (data) => {
-  return axios.get(`/api/get-detail-clinic-by-id?id=${data.id}`);
+const getDetailBarbershopById = (data) => {
+  return axios.get(`/api/get-detail-barbershop-by-id?id=${data.id}`);
 };
 
-const getAllPatientForDoctor = (data) => {
-  return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`);
+const getAllCustomerForBarber = (data) => {
+  return axios.get(`/api/get-list-customer-for-barber?barberId=${data.barberId}&date=${data.date}`);
 };
 const postSendRemedy = (data) => {
   return axios.post(`/api/send-remedy`,data);
@@ -101,23 +101,23 @@ export {
   deleteUserService,
   editUserService,
   getAllCodeService,
-  getTopDoctorHomeService,
-  getAllDoctors,
-  saveDetailDoctorService,
-  getDetailInforDoctor,
-  saveBulkScheduleDoctor,
-  getScheduleDoctorByDate,
-  getExtraInforDoctorById,
-  getProfileDoctorById,
-  postPatientBookAppointment,
+  getTopBarberHomeService,
+  getAllBarbers,
+  saveDetailBarberService,
+  getDetailInforBarber,
+  saveBulkScheduleBarber,
+  getScheduleBarberByDate,
+  getExtraInforBarberById,
+  getProfileBarberById,
+  postCustomerBookAppointment,
   postVerifyBookAppointment,
-  createNewSpecialty,
-  getAllSpecialty,
-  getDetailSpecialtyById,
-  createNewClinic,
-  getAllClinic,
-  getDetailClinicById,
-  getAllPatientForDoctor,
+  createNewHairstyle,
+  getAllHairstyle,
+  getDetailHairstyleById,
+  createNewBarbershop,
+  getAllBarbershop,
+  getDetailBarbershopById,
+  getAllCustomerForBarber,
   postSendRemedy,
   getAllHandbook,
   editHairstyle,

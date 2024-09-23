@@ -5,11 +5,11 @@ import {
   getAllUsers,
   deleteUserService,
   editUserService,
-  getTopDoctorHomeService,
-  getAllDoctors,
-  saveDetailDoctorService,
-  getAllSpecialty,
-  getAllClinic
+  getTopBarberHomeService,
+  getAllBarbers,
+  saveDetailBarberService,
+  getAllHairstyle,
+  getAllBarbershop
 } from "../../services/userService";
 import { toast } from "react-toastify";
 
@@ -191,73 +191,73 @@ export const editUserFailed = () => ({
   type: actionTypes.EDIT_USER_FAILED,
 });
 
-// let res1 = await getTopDoctorHomeService('2');
-export const fetchTopDoctor = () => {
+// let res1 = await getTopBarberHomeService('2');
+export const fetchTopBarber = () => {
   return async (dispatch, getState) => {
     try {
-      let res = await getTopDoctorHomeService("");
+      let res = await getTopBarberHomeService("");
       if (res && res.errCode === 0) {
         dispatch({
-          type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
-          dataDoctors: res.data,
+          type: actionTypes.FETCH_TOP_BARBERS_SUCCESS,
+          dataBarbers: res.data,
         });
       } else {
         dispatch({
-          type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+          type: actionTypes.FETCH_TOP_BARBERS_FAILED,
         });
       }
     } catch (e) {
-      console.log("fetch top doctors fails", e);
+      console.log("fetch top barbers fails", e);
       dispatch({
-        type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+        type: actionTypes.FETCH_TOP_BARBERS_FAILED,
       });
     }
   };
 };
 //
-export const fetchAllDoctors = () => {
+export const fetchAllBarbers = () => {
   return async (dispatch, getState) => {
     try {
-      let res = await getAllDoctors();
+      let res = await getAllBarbers();
       if (res && res.errCode === 0) {
         dispatch({
-          type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
-          dataDoctors: res.data,
+          type: actionTypes.FETCH_ALL_BARBERS_SUCCESS,
+          dataBarbers: res.data,
         });
       } else {
         dispatch({
-          type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+          type: actionTypes.FETCH_ALL_BARBERS_FAILED,
         });
       }
     } catch (e) {
-      console.log("fetch all doctors fails", e);
+      console.log("fetch all barbers fails", e);
       dispatch({
-        type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+        type: actionTypes.FETCH_ALL_BARBERS_FAILED,
       });
     }
   };
 };
 //
-export const saveDetailDoctor = (data) => {
+export const saveDetailBarber = (data) => {
   return async (dispatch, getState) => {
     try {
-      let res = await saveDetailDoctorService(data);
+      let res = await saveDetailBarberService(data);
       if (res && res.errCode === 0) {
-        toast.success("SAVE DETAILS DOCTOR SUCCEED!");
+        toast.success("SAVE DETAILS BARBER SUCCEED!");
         dispatch({
-          type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
-          dataDoctors: res.data,
+          type: actionTypes.SAVE_DETAIL_BARBER_SUCCESS,
+          dataBarbers: res.data,
         });
       } else {
-        toast.error("SAVE DETAILS DOCTOR ERROR!");
+        toast.error("SAVE DETAILS BARBER ERROR!");
         dispatch({
-          type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
+          type: actionTypes.SAVE_DETAIL_BARBER_FAILED,
         });
       }
     } catch (e) {
-      toast.error("SAVE DETAILS DOCTOR ERROR!");
+      toast.error("SAVE DETAILS BARBER ERROR!");
       dispatch({
-        type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
+        type: actionTypes.SAVE_DETAIL_BARBER_FAILED,
       });
     }
   };
@@ -288,15 +288,15 @@ export const fetchAllScheduleTime = () => {
 
 /////////////
 
-export const getRequiredDoctorInfor = () => {
+export const getRequiredBarberInfor = () => {
   return async (dispatch, getState) => {
     try {
-      dispatch({ type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_START });
+      dispatch({ type: actionTypes.FETCH_REQUIRED_BARBER_INFOR_START });
       let resPrice = await getAllCodeService("PRICE");
       let resPayment = await getAllCodeService("PAYMENT");
       let resProvince = await getAllCodeService("PROVINCE");
-      let resSpecialty = await getAllSpecialty();
-      let resClinic = await getAllClinic();
+      let resHairstyle = await getAllHairstyle();
+      let resBarbershop = await getAllBarbershop();
 
       if (
         resPrice &&
@@ -305,33 +305,33 @@ export const getRequiredDoctorInfor = () => {
         resPayment.errCode === 0 &&
         resProvince &&
         resProvince.errCode === 0 &&
-        resSpecialty &&
-        resSpecialty.errCode === 0 &&
-        resClinic &&
-        resClinic.errCode === 0
+        resHairstyle &&
+        resHairstyle.errCode === 0 &&
+        resBarbershop &&
+        resBarbershop.errCode === 0
       ) {
         let data = {
           resPrice: resPrice.data,
           resPayment: resPayment.data,
           resProvince: resProvince.data,
-          resSpecialty: resSpecialty.data,
-          resClinic: resClinic.data,
+          resHairstyle: resHairstyle.data,
+          resBarbershop: resBarbershop.data,
         };
-        dispatch(fetchRequiredDoctorInforSuccess(data));
+        dispatch(fetchRequiredBarberInforSuccess(data));
       } else {
-        dispatch(fetchRequiredDoctorInforFailed());
+        dispatch(fetchRequiredBarberInforFailed());
       }
     } catch (e) {
-      dispatch(fetchRequiredDoctorInforFailed());
-      console.log("fetch doctor price error", e);
+      dispatch(fetchRequiredBarberInforFailed());
+      console.log("fetch barber price error", e);
     }
   };
 };
 //
-export const fetchRequiredDoctorInforSuccess = (allRequiredData) => ({
-  type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
+export const fetchRequiredBarberInforSuccess = (allRequiredData) => ({
+  type: actionTypes.FETCH_REQUIRED_BARBER_INFOR_SUCCESS,
   data: allRequiredData,
 });
-export const fetchRequiredDoctorInforFailed = () => ({
-  type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED,
+export const fetchRequiredBarberInforFailed = () => ({
+  type: actionTypes.FETCH_REQUIRED_BARBER_INFOR_FAILED,
 });

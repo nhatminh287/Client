@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import HomeHeader from "./HomeHeader";
-import Specialty from "./Section/Specialty";
+import Hairstyle from "./Section/Hairstyle";
 import MedicalFacility from "./Section/MedicalFacility";
-import OutStandingDoctor from "./Section/OutStandingDoctor";
+import OutStandingBarber from "./Section/OutStandingBarber";
 import HandBook from "./Section/HandBook";
 import About from "./Section/About";
 import HomeFooter from './HomeFooter'
@@ -25,9 +25,9 @@ class HomePage extends Component {
     return (
       <div>
         <HomeHeader isShowBanner={true}/>
-        <Specialty settings={settings} />
+        <Hairstyle settings={settings} />
         <MedicalFacility settings={settings} />
-        <OutStandingDoctor settings={settings} />
+        <OutStandingBarber settings={settings} />
         <HandBook settings={settings} />
         <About />
         <HomeFooter/>

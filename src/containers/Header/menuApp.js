@@ -27,7 +27,7 @@ export const adminMenu = [
     ],
   },
   {
-    // Manage Clinic
+    // Manage Barbershop
     name: "menu.admin.barbershop",
     menus: [
       {
@@ -58,7 +58,7 @@ export const adminMenu = [
   }
   
 ];
-export const doctorMenu = [
+export const barberMenu = [
   {
     name: "menu.admin.manage-user",
     menus: [

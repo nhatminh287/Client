@@ -4,10 +4,10 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import UserManage from "../containers/System/UserManage";
 import UserRedux from "../containers/System/Admin/UserRedux";
 import Header from "../containers/Header/Header";
-import ManageDoctor from "../containers/System/Admin/ManageDoctor";
-import ManageSpecialty from '../containers/System/Specialty/ManageSpecialty'
-import ManageClinic from '../containers/System/Clinic/ManageClinic';
-import EditHairstyle from "../containers/System/Specialty/EditHairstyle";
+import ManageBarber from "../containers/System/Admin/ManageBarber";
+import ManageHairstyle from '../containers/System/Hairstyle/ManageHairstyle'
+import ManageBarbershop from '../containers/System/Barbershop/ManageBarbershop';
+import EditHairstyle from "../containers/System/Hairstyle/EditHairstyle";
 class System extends Component {
   render() {
     const { systemMenuPath, isLoggedIn } = this.props;
@@ -19,10 +19,10 @@ class System extends Component {
             <Switch>
               <Route path="/system/user-manage" component={UserManage} />
               <Route path="/system/user-redux" component={UserRedux} />
-              <Route path="/system/manage-barber" component={ManageDoctor} />
-              <Route path="/system/add-hairstyle" component={ManageSpecialty} />
+              <Route path="/system/manage-barber" component={ManageBarber} />
+              <Route path="/system/add-hairstyle" component={ManageHairstyle} />
               <Route path="/system/edit-hairstyle" component={EditHairstyle} />
-              <Route path="/system/manage-barbershop" component={ManageClinic} />
+              <Route path="/system/manage-barbershop" component={ManageBarbershop} />
               <Route
                 component={() => {
                   return <Redirect to={systemMenuPath} />;

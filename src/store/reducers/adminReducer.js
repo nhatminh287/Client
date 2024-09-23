@@ -6,11 +6,11 @@ const initialState = {
   positions: [],
   isLoadingGender: false,
   users: [],
-  topDoctors: [],
-  allDoctors: [],
+  topBarbers: [],
+  allBarbers: [],
   allScheduleTime: [],
   
-  allRequiredDoctorInfor:[]
+  allRequiredBarberInfor:[]
 
 };
 
@@ -63,23 +63,23 @@ const adminReducer = (state = initialState, action) => {
       return {
         ...state,
       }; //
-    case actionTypes.FETCH_TOP_DOCTORS_SUCCESS:
-      state.topDoctors = action.dataDoctors;
+    case actionTypes.FETCH_TOP_BARBERS_SUCCESS:
+      state.topBarbers = action.dataBarbers;
       return {
         ...state,
       }; //
-    case actionTypes.FETCH_TOP_DOCTORS_FAILED:
-      state.topDoctors = [];
+    case actionTypes.FETCH_TOP_BARBERS_FAILED:
+      state.topBarbers = [];
       return {
         ...state,
       }; //
-    case actionTypes.FETCH_ALL_DOCTORS_SUCCESS:
-      state.allDoctors = action.dataDoctors;
+    case actionTypes.FETCH_ALL_BARBERS_SUCCESS:
+      state.allBarbers = action.dataBarbers;
       return {
         ...state,
       }; //
-    case actionTypes.FETCH_ALL_DOCTORS_FAILED:
-      state.allDoctors = [];
+    case actionTypes.FETCH_ALL_BARBERS_FAILED:
+      state.allBarbers = [];
       return {
         ...state,
       }; //
@@ -94,13 +94,13 @@ const adminReducer = (state = initialState, action) => {
         ...state,
       }; //
 
-    case actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS:
-      state.allRequiredDoctorInfor = action.data;
+    case actionTypes.FETCH_REQUIRED_BARBER_INFOR_SUCCESS:
+      state.allRequiredBarberInfor = action.data;
       return {
         ...state,
       }; //
-    case actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED:
-      state.allRequiredDoctorInfor = [];
+    case actionTypes.FETCH_REQUIRED_BARBER_INFOR_FAILED:
+      state.allRequiredBarberInfor = [];
       return {
         ...state,
       }; //

@@ -4,9 +4,9 @@ export const path = {
   LOGIN: "/login",
   LOG_OUT: "/logout",
   SYSTEM: "/system",
-  DETAIL_DOCTOR:"/detail-doctor/:id",
-  DETAIL_SPECIALTY:"/detail-specialty/:id",
-  DETAIL_CLINIC:"/detail-clinic/:id",
+  DETAIL_BARBER:"/detail-barber/:id",
+  DETAIL_HAIRSTYLE:"/detail-hairstyle/:id",
+  DETAIL_BARBERSHOP:"/detail-barbershop/:id",
   VERIFY_EMAIL_BOOKING:"/verify-booking",
 };
 
@@ -33,6 +33,6 @@ export const YesNoObj = {
 
 export const USER_ROLE = {
   ADMIN: 'R1',
-  DOCTOR: 'R2',
-  PATIENT:'R3',
+  BARBER: 'R2',
+  CUSTOMER:'R3',
 }

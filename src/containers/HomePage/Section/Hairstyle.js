@@ -1,39 +1,52 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
-import { getAllBarbershop } from "../../../services/userService";
+import { getAllHairstyle } from "../../../services/userService";
+import "./Hairstyle.scss";
 import { withRouter } from "react-router";
-import './MedicalFacility.scss';
-class MedicalFacility extends Component {
+
+class Hairstyle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataBarbershops: [],
+      dataHairstyle: [],
     };
   }
   async componentDidMount() {
-    let res = await getAllBarbershop();
+    let res = await getAllHairstyle();
     if (res && res.errCode === 0) {
       this.setState({
-        dataBarbershops: res.data ? res.data : [],
+        dataHairstyle: res.data ? res.data : [],
       });
     }
+    try {
+      let res = await getAllHairstyle();
+      console.log("Hairstyle Data:", res);
+      if (res && res.errCode === 0) {
+        this.setState({
+          dataHairstyle: res.data ? res.data : [],
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   }
-  handleViewDetailBarbershop = (barbershop) => {
+  handleViewDetailHairstyle = (hairstyle) => {
     if (this.props.history) {
-      this.props.history.push(`/detail-barbershop/${barbershop.id}`);
+      this.props.history.push(`/detail-hairstyle/${hairstyle.id}`);
     }
   };
 
   render() {
-    let { dataBarbershops } = this.state;
+    let { dataHairstyle } = this.state;
     return (
-      <div className="section-share section-medical-facility">
+      <div className="section-share section-hairstyle">
         <div className="section-container">
           <div className="section-header">
             <span className="title-section">
-            <FormattedMessage id="homepage.outstanding-barbershop" />
+              <FormattedMessage id="homepage.hairstyle-popular" />
             </span>
             <button className="btn-section">
               <FormattedMessage id="homepage.more-infor" />
@@ -41,20 +54,20 @@ class MedicalFacility extends Component {
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
-              {dataBarbershops &&
-                dataBarbershops.length > 0 &&
-                dataBarbershops.map((item, index) => {
+              {dataHairstyle &&
+                dataHairstyle.length > 0 &&
+                dataHairstyle.map((item, index) => {
                   return (
                     <div
-                      className="section-customize barbershop-child"
+                      className="section-customize hairstyle-child"
                       key={index}
-                      onClick={() => this.handleViewDetailBarbershop(item)}
+                      onClick={() => this.handleViewDetailHairstyle(item)}
                     >
                       <div
-                        className="bg-image section-medical-facility"
+                        className="bg-image section-hairstyle"
                         style={{ backgroundImage: `url(${item.image})` }}
                       ></div>
-                      <div className="barbershop-name">{item.name}</div>
+                      <div className="hairstyle-name">{item.name}</div>
                     </div>
                   );
                 })}
@@ -78,5 +91,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(MedicalFacility)
+  connect(mapStateToProps, mapDispatchToProps)(Hairstyle)
 );

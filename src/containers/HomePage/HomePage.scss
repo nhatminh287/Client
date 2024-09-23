@@ -1,8 +1,8 @@
 .section-share {
-  &.section-specialty {
+  &.section-hairstyle {
     background: #f5f5f5;
   }
-  &.section-outstanding-doctor {
+  &.section-outstanding-barber {
     background: #f5f5f5;
   }
   &.section-about {
@@ -20,8 +20,8 @@
         background-size: 100% 100%;
         background-color: #eee;
        
-        &.section-outstanding-doctor {
-          // background-image: url("../../assets/outstanding-doctor/doctor.jpg");
+        &.section-outstanding-barber {
+          // background-image: url("../../assets/outstanding-barber/barber.jpg");
           width: 130px;
           height: 130px;
           border-radius: 50%;
@@ -31,7 +31,7 @@
   }
 }
 
-.section-outstanding-doctor {
+.section-outstanding-barber {
   .outer-bg {
     display: flex;
     justify-content: center;

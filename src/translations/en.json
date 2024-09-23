@@ -1,11 +1,11 @@
 {
   "homeheader": {
     "speciality": "Hairstyle",
-    "searchdoctor": "Find a barber",
+    "searchbarber": "Find a barber",
     "health-facility": "Barbershop",
     "select-room": "Choose Barbershop",
-    "doctor": "Barber",
-    "select-doctor": "Choose a barber expert",
+    "barber": "Barber",
+    "select-barber": "Choose a barber expert",
     "fee": "Combo",
     "check-health": "Comprehensive hair care combo",
     "support": "Support",
@@ -32,7 +32,7 @@
       "crud-redux": "CRUD Redux",
       "barbershop": "Barbershop",
       "manage-barbershop": "Manage Barbershop",
-      "specialty": "Specialties",     
+      "hairstyle": "Specialties",     
       "handbook": "HandBook",
       "manage-handbook": "Manage HandBook",
       "hairstyle": "Hairstyle",
@@ -60,27 +60,27 @@
     "edit": "save changes"
   },
   "homepage": {
-    "outstanding-doctor": "Last Week Featured Barber",
+    "outstanding-barber": "Last Week Featured Barber",
     "more-infor": "Read More Infor",
-    "specialty-popular":"Most Popular Hairstyle",
+    "hairstyle-popular":"Most Popular Hairstyle",
     "outstanding-barbershop": "Outstanding Barbershop",
     "handbook": "HandBook",
     "about": "Experience at a professional Barbershop"
   },
   "manage-schedule": {
     "title": "Manage barber`s  work plan",
-    "choose-doctor": "Choose Barber",
+    "choose-barber": "Choose Barber",
     "choose-date": "Choose Date",
     "save": "Save Infor"
   },
-  "patient": {
-    "detail-doctor": {
+  "customer": {
+    "detail-barber": {
       "schedule": "Schedule",
       "no-schedule": "Barber doesn't have an appointment during this time !",
       "choose": " Choose ",
       "book-free": " And Book (Free !) "
     },
-    "extra-infor-doctor":{
+    "extra-infor-barber":{
       "text-address":"Address of Barbershop",
       "price":"Price :",
       "detail":"See Details",
@@ -103,20 +103,20 @@
     }
   },
   "admin": {
-    "manage-doctor": {
+    "manage-barber": {
       "title": "Create More Informations Barber",
-      "select-doctor": "Choose Barbers ...",
+      "select-barber": "Choose Barbers ...",
       "intro": "Introduction",
       "add": "Create Infor",
       "save": "Save Infor",
       "price": "Price",
       "payment": "Payment Method",
       "province":"Province",
-      "nameClinic":"Name Barbershop",
-      "addressClinic":"Address Barbershop",
+      "nameBarbershop":"Name Barbershop",
+      "addressBarbershop":"Address Barbershop",
       "note":"Note",
-      "specialty":"Choose Hairstyle",
-      "select-clinic":"Choose Barbershop"
+      "hairstyle":"Choose Hairstyle",
+      "select-barbershop":"Choose Barbershop"
     }
   }
 }
