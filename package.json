@@ -11,12 +11,14 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "caniuse-lite": "1.0.30001632",
     "connected-react-router": "^6.9.1",
     "lodash": "^4.17.21",
     "markdown-it": "^12.1.0",
     "moment": "^2.29.0",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
+    "react-app-hoi-dan-it": "file:",
     "react-auth-wrapper": "^1.0.0",
     "react-autosuggest": "^10.1.0",
     "react-bootstrap-table-next": "^4.0.3",
@@ -67,5 +69,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "caniuse-lite": "1.0.30001632"
   }
 }
